@@ -1,0 +1,24 @@
+AllCops:
+
+  # 除外するディレクトリ
+  Exclude:
+    - bin/*
+    - config/**/*
+    - Gemfile
+    - Rakefile
+    - db/schema.rb
+    - db/migrate/*
+    - db/seeds.rb
+
+  # Missing top level class documentation comment.
+  Style/Documentation:
+    Enabled: false
+
+  # Use nested module/class definitions instead of compact style.
+  # NG: module Gem::Search
+  Style/ClassAndModuleChildren:
+    Enabled: false
+
+  # Limit lines to 80 characters.
+  LineLength:
+    Enabled: false

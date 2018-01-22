@@ -17,8 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    flash[:success] =  'サインアウトしました。'
     sign_out
     redirect_to signin_path
-    flash.now[:success] =  'サインアウトしました。'
   end
 end

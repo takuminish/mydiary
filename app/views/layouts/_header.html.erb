@@ -1,0 +1,16 @@
+ <header class="navbar navbar-dark bg-dark">
+      <div class="container">
+	<%= link_to "MyDiary",'#',class: "navbar-brand" %>
+	<nav>
+	  <ul class="nav navbar-nav navbar-right">
+	    <li class="nav-item">
+	      <% if !signed_in?  %>
+	      <%= link_to "Sign in",signin_path , class:"nav-link"%>
+	      <% else %>
+	      <%= link_to "Sign out",signout_path , class:"nav-link" , method: :delete %>
+	      <% end %>
+	    </li>
+	  </ul>
+	</nav>
+      </div>
+    </header>

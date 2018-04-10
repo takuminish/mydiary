@@ -6,9 +6,6 @@ git_source(:github) do |repo_name|
 end
 # bcrypt
 gem 'bcrypt'
-
-# bootstrap
-gem 'bootstrap', '~> 4.0.0.beta2.1'
 # jquery
 gem 'jquery-rails'
 # respec

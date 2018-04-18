@@ -1,13 +1,27 @@
 <header class="navbar navbar-dark bg-primary">
   <div class="container">
+    <div class="navbar-header">
     <%= link_to "MyDiary",'#',class: "navbar-brand" %>
-          <ul class="navbar-nav">
-    <% if !signed_in?  %>
-        <li class="nav-item"><%= link_to "Sign up",signup_path , class:"nav-link"%></li>
-	<li class="nav-item"><%= link_to "Sign in", signin_path , class: "nav-link" %></li>
-	  <% else %>
-	  <li class="nav-item"> <%= link_to "Sign out",signout_path , class: "nav-link" , method: :delete %></li>
-	  <% end %>
-      </ul>
-   </div>
- </header>
+    </div>
+    <div id="navbar-main">
+    <ul class="nav navbar-nav">
+      <% if !signed_in?  %>
+      <li class="nav-item"><%= link_to signup_path , class:"nav-link" do %>
+	<i class="fa fa-user-plus"></i> Sign up
+	<% end %>
+      </li>
+      <li class="nav-item"><%= link_to signin_path , class: "nav-link" do %>
+	<i class="fa fa-sign-in"></i> Sign in
+	<% end %>
+      </li>
+      <% else %>
+      <li class="nav-item"> <%= link_to signout_path , class: "nav-link" , method: :delete do %>
+	<i class="fa fa-sign-out"></i> Sign out
+	<% end %>
+      </li>
+      <% end %>
+    </ul>
+    </div>
+    
+  </div>
+  </header>

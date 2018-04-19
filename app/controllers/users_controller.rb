@@ -1,3 +1,4 @@
+# coding: utf-8
 class UsersController < ApplicationController
   before_action :signin_user, only: [:new]
   before_action :not_signin_user, only: [:show]
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(id: session[:user_id])
   end
 
   def user_params

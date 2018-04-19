@@ -1,16 +1,15 @@
 <div class="row">
-  <% @diary.each do |d| %>
+ <% @diary.each do |d| %>
   <div class="col-sm-3">
-    <div class="card" style="width: 18rem;">
-      <div class="card-block">
+     <div class="card mb-3" style="width: 15rem;">
+       <div class="card-block">
       <h5 class="card-title"><%= d.display_date %></h5>
       <p class="card-text"><%= d.statement %></p>
-      <a href="#" class="btn btn-primary">Show Diary</a>
-      </div>
+      <%= link_to "Show Diary", diary_path(d.id), class: "btn btn-primary" %>
+       </div>
+       </div>
     </div>
-  </div>
   <% end %>
 </div>
-
 
 

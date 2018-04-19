@@ -15,6 +15,10 @@
 	<% end %>
       </li>
       <% else %>
+       <li class="nav-item"> <%= link_to diarylist_path , class: "nav-link" do %>
+	 <i class="fa fa-book"></i> Diary
+	 <% end %>
+      </li>
       <li class="nav-item"> <%= link_to signout_path , class: "nav-link" , method: :delete do %>
 	<i class="fa fa-sign-out"></i> Sign out
 	<% end %>

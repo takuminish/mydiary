@@ -5304,8 +5304,8 @@ tbody.collapse.in
 
 .navbar
 {
+    margin-bottom: 1rem;
     position: relative;
-
     padding: 1rem 1rem;
 }
 .navbar::after

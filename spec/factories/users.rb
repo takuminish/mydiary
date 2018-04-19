@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    name 'MyString'
-    password_digest 'MyString'
+    name 'testuser'
+    password 'testuser'
   end
 end

@@ -4,6 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
+
+
+# pry
+gem 'pry-rails' 
+gem 'pry-doc'   
+gem 'pry-byebug' 
+gem 'pry-stack_explorer' 
 # bcrypt
 gem 'bcrypt'
 # jquery
@@ -14,6 +21,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
+  gem 'faker'
 end
 
 group :test do

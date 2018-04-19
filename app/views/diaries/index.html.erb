@@ -1,4 +1,16 @@
+<div class="row">
+  <% @diary.each do |d| %>
+  <div class="col-sm-3">
+    <div class="card" style="width: 18rem;">
+      <div class="card-block">
+      <h5 class="card-title"><%= d.display_date %></h5>
+      <p class="card-text"><%= d.statement %></p>
+      <a href="#" class="btn btn-primary">Show Diary</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 
-<% @diary.each do |d| %>
-<h1><%= d.statement %></h1>
-<% end %>
+
+

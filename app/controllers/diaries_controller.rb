@@ -1,5 +1,7 @@
 # coding: utf-8
 class DiariesController < ApplicationController
+  include DiariesHelper 
+
   before_action :not_signin_user, only: [:index, :show]
   before_action :true_diary, only: [:show]
   
@@ -12,7 +14,26 @@ class DiariesController < ApplicationController
     @diary = Diary.find_by(id: params[:id])
   end
 
-  def ture_diary
+  def edit
+
+  end
+
+  def new
+    @diary = Diary.new
+  end
+
+  def create
+    user = User.find(session[:user_id])
+    date = display_date
+    @diary = Diary.new(display_date: date,statement: params[:diary][:statement],user_id: user.id)
+    if @diary.save
+      redirect_to diarylist_path
+    else
+      render 'new'
+    end
+  end
+  
+  def true_diary
     diary = Diary.find(params[:id])
     user = User.find(session[:user_id])
     unless diary.user_id == user.id

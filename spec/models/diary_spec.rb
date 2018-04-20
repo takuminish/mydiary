@@ -24,6 +24,10 @@ RSpec.describe Diary, type: :model do
         diary1.display_date = nil
         expect(diary1).not_to be_valid
       end
+      it 'XXXX.XX.XX(曜日)の形式でない時登録失敗' do
+        diary1.display_date = 'aaaaaaaaaa'
+        expect(diary1).not_to be_valid
+      end
     end
     context 'user_idが' do
       it 'user.idに存在していない時登録失敗' do

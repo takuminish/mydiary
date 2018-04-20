@@ -12,6 +12,7 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find_by(id: params[:id])
+    @statement = markdown(@diary.statement)
   end
 
   def edit

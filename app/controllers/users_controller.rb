@@ -26,13 +26,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :password, :password_confirmation)
   end
 
-  def not_signin_user
-    unless signed_in?
-      flash[:danger] = 'ログインしてください'
-      redirect_to signin_path
-    end
-  end
-
+ 
   def signin_user
     if signed_in?
       user = User.find(session[:user_id])

@@ -126,3 +126,140 @@
 {
   margin-bottom: 0;
 }
+
+.preview-diary > h1, h2, h3, h4, h5, h6
+{
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+
+.preview-diary > h1
+{
+  font-size: 28px;
+  border-bottom: 1px solid #aaaaaa;
+  color: black;
+}
+
+.preview-diary > h2
+{
+  font-size: 24px;
+  color: black;
+}
+
+.preview-diary > h3
+{
+  font-size: 18px;
+}
+
+.preview-diary > h4
+{
+  font-size: 16px;
+}
+
+.preview-diary > h5
+{
+  font-size: 14px;
+}
+
+.preview-diary > h6
+{
+  color: #777777;
+  font-size: 14px;
+}
+
+.preview-diary > pre code
+{
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.preview-diary > .highlight pre
+{
+  background-color: #364549;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.preview-diary > pre
+{
+  background-color: #f8f8f8;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.preview-diary > pre code, pre tt
+{
+  background-color: transparent;
+  border: none;
+}
+
+.preview-diary > table
+{
+  padding: 0;
+}
+
+.preview-diary > table tr
+{
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.preview-diary > table tr:nth-child(2n)
+{
+  background-color: #f8f8f8;
+}
+
+.preview-diary > table tr th
+{
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.preview-diary > table tr td
+{
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.preview-diary > table tr th :first-child, .preview-diary > table tr td :first-child
+{
+  margin-top: 0;
+}
+
+.preview-diary > table tr th :last-child, .preview-diary > table tr td :last-child
+{
+  margin-bottom: 0;
+}
+
+.edit-diary
+{
+  width: 45%;
+  float: left;
+}
+
+.preview-diary
+{
+  width: 50%;
+  float: right;
+}

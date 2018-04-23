@@ -1,3 +1,129 @@
 // Place all the styles related to the diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.diary-body > h1, h2, h3, h4, h5, h6
+{
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+
+.diary-body > h1
+{
+  font-size: 28px;
+  border-bottom: 1px solid #aaaaaa;
+  color: black;
+}
+
+.diary-body > h2
+{
+  font-size: 24px;
+  color: black;
+}
+
+.diary-body > h3
+{
+  font-size: 18px;
+}
+
+.diary-body > h4
+{
+  font-size: 16px;
+}
+
+.diary-body > h5
+{
+  font-size: 14px;
+}
+
+.diary-body > h6
+{
+  color: #777777;
+  font-size: 14px;
+}
+
+.diary-body > pre code
+{
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.diary-body > .highlight pre
+{
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.diary-body > pre
+{
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.diary-body > pre code, pre tt
+{
+  background-color: transparent;
+  border: none;
+}
+
+.diary-body > table
+{
+  padding: 0;
+}
+
+.diary-body > table tr
+{
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.diary-body > table tr:nth-child(2n)
+{
+  background-color: #f8f8f8;
+}
+
+.diary-body > table tr th
+{
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.diary-body > table tr td
+{
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.diary-body > table tr th :first-child, .diary-body > table tr td :first-child
+{
+  margin-top: 0;
+}
+
+.diary-body > table tr th :last-child, .diary-body > table tr td :last-child
+{
+  margin-bottom: 0;
+}

@@ -1,4 +1,7 @@
+<div class="diary-header">
 <h1><%= @diary.display_date %></h1>
+</div>
 
-
-<%= @statement.html_safe %>
+<div class="diary-body">
+<%= markdown(@diary.statement) %>
+</div>

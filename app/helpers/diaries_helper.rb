@@ -11,7 +11,12 @@ module DiariesHelper
   end
 
   def markdown(statement)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    return markdown.render(statement)
-  end
+      options = {
+        fenced_code_blocks: true,
+        tables: true,
+        hard_wrap: true
+      }
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+      return markdown.render(statement).html_safe
+  end  
 end

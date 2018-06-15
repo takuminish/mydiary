@@ -1,5 +1,5 @@
 $(function () {
-    $('#diary-statement').bind("input propertychange" , function () {
+    $('#diary-statement').on("input" , function () {
         $('.preview-diary').text("ajax");
     });
 });

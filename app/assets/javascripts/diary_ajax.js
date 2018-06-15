@@ -1,5 +1,5 @@
 $(function () {
     $('#diary-statement').on("input" , function () {
-        $('.preview-diary').text("ajax");
+        $('.preview-diary').html(marked($('#diary-statement').val()));
     });
 });

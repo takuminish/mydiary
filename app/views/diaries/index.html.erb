@@ -1,18 +1,29 @@
 <div>
   <%= link_to "new Diary", new_diary_path, class: "btn btn-info" , style: "float: left "%>
-<div class="search_diary" style="float: right">
-<div class="form-inline">
-<div class="form-group">
+<!--
+  <div class="search_diary" style="float: right">
+  <div class="form-inline">
+  <div class="form-group">
+   
 <%= form_tag diarylist_path, :method => 'get' do %>
 <%= text_field_tag :search_date ,"" ,class:  'form-control' , size: "30" %>
 <%= submit_tag "検索" , class: "btn btn-primary"%>
 <% end %>
 </div>
 </div>
+-->
+<div class="search_diary" style="float: right">
+<div class="form-inline">
+<div class="form-group">
+<%= text_field_tag :search_date ,"" ,class:  'form-control' , id: "diary_search_date" , size: "30" %>
+<%= button_tag "検索" , class: "btn btn-primary", id: "diary_search_date_button" %>
+
+</div>
+</div>
 </div>
 </br></br>
 
-
+<div class="diary-list">
 <div class="row">
  <% @diary.each do |d| %>
   <div class="col-sm-3">
@@ -24,6 +35,7 @@
        </div>
     </div>
   <% end %>
+</div>
 </div>
 
 

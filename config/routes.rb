@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
 
   get    'diarylist' => 'diaries#index'
+  get    'diaries/search' => 'diaries#search'
 
  resources :diaries
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

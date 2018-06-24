@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@keyframes zoom-in {
+  0% {
+     transform: scale(.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.is-animated {
+  animation: .6s zoom-in;
+// animation: .6s rotate-right;
+}
+
 .new-diary
 {
   height: 700px;

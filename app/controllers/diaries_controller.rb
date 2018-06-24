@@ -8,6 +8,9 @@ class DiariesController < ApplicationController
   def index
     user = User.find_by(id: session[:user_id])
     @diary = Diary.where(user_id: user.id)
+    if params[:search_date].present?
+      @diary = @diary.search_by_display_date(params[:search_date])
+    end
   end
 
   def show

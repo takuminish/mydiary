@@ -1,9 +1,6 @@
-<h1>new diary</h1>
+<h1 style="text-align: center">new diary</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@diary) do |f| %>
-
     <% if @diary.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-danger">
@@ -16,17 +13,16 @@
       </ul>
     </div>
     <% end %>
-  </div>
 </div>
 <div class="new-diary">
   <div class="edit-diary">
     <div class="form-group">
+         <%= form_for(@diary) do |f| %>
     <%= f.label :statement %>
-    <%= f.text_area :statement , class: 'form-control' ,id: 'diary-statement' %>
-    </div>
+    <%= f.text_area :statement , class: 'form-control' ,id: 'diary-statement' %></br>
     <%= f.submit "Create Diary", class: "btn btn-success "%>
+    </div>
     <% end %>
-    
 </div>
 <div class="preview-diary">
 </div>
